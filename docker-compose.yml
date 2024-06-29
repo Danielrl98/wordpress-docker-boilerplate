@@ -1,6 +1,7 @@
 services:
   db:
     image: mysql:5.7
+    container_name: mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example_password
@@ -10,17 +11,19 @@ services:
   adminer:
     depends_on: 
     - db
+    container_name: adminer
     image: adminer
     restart: always
     ports: 
         - 8888:8080
   wordpress:
     build: .
+    container_name: wordpress
     depends_on:
       - db
     image: wordpress:latest
     ports:
-      - 8000:80
+      - 8080:80
     restart: always
     volumes:
       - .:/var/www/html

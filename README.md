@@ -2,6 +2,5 @@
 
 ```
     docker rm -f wordpress
-    docker compose build --no-cache
-    docker compose up -d 
+    sudo docker-compose -f "docker-compose.yml" up -d --build
 ```

@@ -2,10 +2,14 @@ FROM mysql:5.7
 
 FROM wordpress
 
-RUN mkdir -p /var/www/html/wp-content
+WORKDIR /var/www/html/
 
-RUN chmod -R 777 /var/www/html/wp-content
+RUN mkdir -p /var/www/html/
+
+RUN chmod -R 777 /var/www/html/
 
 COPY . . /var/www/html/wp-content/
 
-RUN chown -R www-data:www-data /var/www/html
+EXPOSE 8080
+
+RUN chown -R www-data:www-data /var/www/html/
