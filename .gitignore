@@ -2,3 +2,7 @@ wp-admin/
 wp-includes/
 .htaccess
 index.php
+
+*.php
+
+/vendor/

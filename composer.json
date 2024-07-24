@@ -1,0 +1,15 @@
+{
+    "name": "daniel/wordpress",
+    "autoload": {
+        "psr-4": {
+            "Daniel\\Wordpress\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "danielrl98",
+            "email": "daniel-rl-98@hotmail.com"
+        }
+    ],
+    "require": {}
+}
